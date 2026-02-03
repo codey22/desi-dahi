@@ -3,13 +3,11 @@ export const products = [
         _id: '1',
         name: 'Pure Desi Dahi',
         slug: 'pure-desi-dahi',
-        description: 'Traditional handmade curd prepared from fresh A2 cow milk using authentic desi methods. Rich, creamy, and packed with natural probiotics for better digestion and immunity.',
+        description: 'Experience the authentic taste of tradition with our Pure Desi Dahi. Handcrafted with love using 100% pure A2 cow milk, this dahi is set in traditional clay pots to preserve its natural nutrients and rich, creamy texture. It is a perfect blend of health and taste, offering a soothing and refreshing experience with every spoonful. Whether you enjoy it plain, with parathas, or as a base for your favorite curries, our Desi Dahi brings the wholesome goodness of the village straight to your table.',
         category: 'dahi',
         price: 80,
         images: [
             '/Photo 1.jpg',
-            'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg',
-            'https://images.pexels.com/photos/6544380/pexels-photo-6544380.jpeg',
         ],
         benefits: [
             'Made from 100% pure A2 cow milk',
@@ -33,13 +31,11 @@ export const products = [
         _id: '2',
         name: 'Mishti Doi',
         slug: 'mishti-doi',
-        description: 'Authentic Bengali sweet curd made with caramelized sugar and fresh milk. A traditional delicacy that melts in your mouth with every spoonful.',
+        description: 'Indulge in the heavenly sweetness of Bengal with our signature Mishti Doi. Prepared by slowly reducing fresh milk and caramelizing pure sugar, this delicacy offers a rich, velvety texture and a distinct caramel flavor that lingers on your palate. Fermented in earthen pots to enhance its aroma and taste, our Mishti Doi is the perfect dessert to complete any meal. It is not just a sweet treat, but a celebration of culture and culinary craftsmanship.',
         category: 'mishti-doi',
         price: 120,
         images: [
             '/Photo 2.jpg',
-            'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg',
-            'https://images.pexels.com/photos/7937474/pexels-photo-7937474.jpeg',
         ],
         benefits: [
             'Traditional Bengali recipe',
@@ -63,13 +59,11 @@ export const products = [
         _id: '3',
         name: 'A2 Cow Curd',
         slug: 'a2-cow-curd',
-        description: 'Premium curd made exclusively from A2 beta-casein cow milk. Easier to digest and more nutritious than regular curd. Perfect for daily consumption.',
+        description: 'Discover the purest form of nutrition with our A2 Cow Curd. Sourced exclusively from indigenous cows that produce A2 beta-casein milk, this curd is known for its superior digestibility and health benefits. It is lighter on the stomach, rich in essential vitamins, and free from harmful additives. Ideal for health-conscious individuals and those with sensitive digestion, our A2 Cow Curd provides a natural boost to your immunity while delivering a fresh, clean taste.',
         category: 'a2-curd',
         price: 100,
         images: [
             '/Photo 3.jpg',
-            'https://images.pexels.com/photos/6544380/pexels-photo-6544380.jpeg',
-            'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg',
         ],
         benefits: [
             'Pure A2 beta-casein protein',
@@ -93,12 +87,11 @@ export const products = [
         _id: '4',
         name: 'Desi Lassi',
         slug: 'desi-lassi',
-        description: 'Refreshing traditional lassi made from fresh dahi, lightly sweetened and flavored with a hint of cardamom.',
+        description: 'Refresh yourself with the cool, creamy goodness of our Desi Lassi. Churned to perfection from our fresh, thick dahi, this traditional beverage is a natural thirst quencher. Lightly sweetened and infused with a hint of aromatic cardamom, it offers a burst of energy and hydration. Whether it is a hot summer day or a complement to a spicy meal, our Desi Lassi is the ultimate comfort drink that brings back memories of simpler times.',
         category: 'lassi',
         price: 60,
         images: [
-            'https://images.pexels.com/photos/7937474/pexels-photo-7937474.jpeg',
-            'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg',
+            '/Lassi.jpg',
         ],
         benefits: [
             'Instant refreshing energy',

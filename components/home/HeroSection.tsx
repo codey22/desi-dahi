@@ -8,7 +8,7 @@ import { ChevronRight } from 'lucide-react';
 export default function HeroSection() {
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-blue">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-blue">
             {/* Chhaswala-inspired Vibrant Background */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blue to-cyan-400 opacity-90" />

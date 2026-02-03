@@ -80,7 +80,7 @@ export default function ProductHighlights() {
                                 <p className="text-black/60 font-medium mb-8">
                                     {product.tagline}
                                 </p>
-                                <Link href={`/product/${product.id}`} className="w-full">
+                                <Link href={`/products/${product.id}`} className="w-full">
                                     <button className="w-full bg-black text-white py-5 rounded-full font-black text-lg tracking-tight shadow-xl shadow-black/20 hover:scale-105 active:scale-95 transition-all">
                                         ORDER NOW
                                     </button>

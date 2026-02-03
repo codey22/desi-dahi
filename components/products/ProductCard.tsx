@@ -43,7 +43,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                             <span className="text-3xl font-bold text-brand-brown">
                                 {formatCurrency(product.price)}
                             </span>
-                            <span className="bg-brand-maroon text-white px-4 py-2 rounded-full font-semibold text-sm group-hover:bg-brand-maroon-dark transition-colors shadow-md group-hover:shadow-lg transform group-hover:scale-105">
+                            <span className="bg-black text-white px-4 py-2 rounded-full font-semibold text-sm group-hover:bg-gray-800 transition-colors shadow-md group-hover:shadow-lg transform group-hover:scale-105">
                                 View Details
                             </span>
                         </div>

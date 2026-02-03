@@ -16,7 +16,7 @@ export default function ProductsPage() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-desi-cream via-brand-yellow/10 to-white py-20 relative overflow-hidden">
             <div className="container mx-auto px-4">
-                <ParallaxSection speed={0.15}>
+                <ParallaxSection speed={0.15} className="mb-24 relative z-10">
                     <ScrollReveal>
                         <h1 className="text-5xl md:text-6xl font-bold text-center mb-4 text-gradient-desi">
                             Our Products
@@ -27,7 +27,9 @@ export default function ProductsPage() {
                     </ScrollReveal>
                 </ParallaxSection>
 
-                <ProductFilters />
+                <div className="relative z-20 bg-transparent">
+                    <ProductFilters />
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     {data.map((product: any, index: number) => (

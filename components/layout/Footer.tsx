@@ -6,7 +6,7 @@ import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Youtube, MessageCirc
 
 export default function Footer() {
     return (
-        <footer className="relative bg-brand-blue text-white pt-32 pb-16 overflow-hidden">
+        <footer id="footer" className="relative bg-brand-blue text-white pt-32 pb-16 overflow-hidden">
             {/* Soft pink wave transition at the top from the section before (if applicable) */}
 
             <div className="container mx-auto px-6 relative z-10">
@@ -44,10 +44,18 @@ export default function Footer() {
                         <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
                             <h4 className="text-xl font-black uppercase tracking-widest mb-8 text-white">Explore</h4>
                             <ul className="space-y-4">
-                                {['Home', 'About Us', 'Varieties', 'Contact'].map((item) => (
-                                    <li key={item}>
-                                        <Link href="#" className="text-white/60 hover:text-white transition-colors font-bold uppercase tracking-tight">
-                                            {item}
+                                {[
+                                    { label: 'Home', href: '/#hero' },
+                                    { label: 'About Us', href: '/about' },
+                                    { label: 'Varieties', href: '/products' },
+                                    { label: 'Contact', href: '#footer' }
+                                ].map((item) => (
+                                    <li key={item.label}>
+                                        <Link 
+                                            href={item.href} 
+                                            className="text-white/60 hover:text-white transition-colors font-bold uppercase tracking-tight"
+                                        >
+                                            {item.label}
                                         </Link>
                                     </li>
                                 ))}
@@ -57,10 +65,15 @@ export default function Footer() {
                         <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
                             <h4 className="text-xl font-black uppercase tracking-widest mb-8 text-white">Deliciousness</h4>
                             <ul className="space-y-4">
-                                {['Pure Desi Dahi', 'Mishti Doi', 'A2 Cow Curd', 'Lassi & Buttermilk'].map((item) => (
-                                    <li key={item}>
-                                        <Link href="#" className="text-white/60 hover:text-white transition-colors font-bold uppercase tracking-tight">
-                                            {item}
+                                {[
+                                    { label: 'Pure Desi Dahi', href: '/products/pure-desi-dahi' },
+                                    { label: 'Mishti Doi', href: '/products/mishti-doi' },
+                                    { label: 'A2 Cow Curd', href: '/products/a2-cow-curd' },
+                                    { label: 'Lassi & Buttermilk', href: '/products/desi-lassi' }
+                                ].map((item) => (
+                                    <li key={item.label}>
+                                        <Link href={item.href} className="text-white/60 hover:text-white transition-colors font-bold uppercase tracking-tight">
+                                            {item.label}
                                         </Link>
                                     </li>
                                 ))}
@@ -74,7 +87,7 @@ export default function Footer() {
                                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
                                         <Phone className="w-5 h-5 text-white" />
                                     </div>
-                                    <span className="text-white/80 font-bold">+91 9876543211</span>
+                                    <span className="text-white/80 font-bold">+91 9876543210</span>
                                 </li>
                                 <li className="flex items-center gap-4">
                                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
@@ -106,21 +119,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-
-            {/* Persistent WhatsApp Button */}
-            <a
-                href="https://wa.me/919876543210"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-5 rounded-full shadow-[0_20px_50px_rgba(37,211,102,0.5)] hover:scale-110 active:scale-95 transition-all duration-300 group ring-4 ring-white/10"
-            >
-                <div className="relative">
-                    <MessageCircle className="w-10 h-10 fill-white text-[#25D366]" />
-                    <span className="absolute right-full mr-6 top-1/2 -translate-y-1/2 bg-white text-brand-blue-dark px-6 py-3 rounded-2xl text-lg font-black whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-2xl pointer-events-none uppercase tracking-tighter scale-0 group-hover:scale-100 origin-right transition-transform">
-                        Order on WhatsApp
-                    </span>
-                </div>
-            </a>
         </footer>
     );
 }

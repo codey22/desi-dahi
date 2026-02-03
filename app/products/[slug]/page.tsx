@@ -6,9 +6,9 @@ import ProductDetails from '@/components/products/ProductDetails';
 import NutritionChart from '@/components/products/NutritionChart';
 
 interface ProductPageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
 export async function generateStaticParams() {
@@ -18,7 +18,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-    const product = staticProducts.find((p) => p.slug === params.slug);
+    const { slug } = await params;
+    const product = staticProducts.find((p) => p.slug === slug);
 
     if (!product) {
         return { title: 'Product Not Found - Desi Dahi' };
@@ -44,8 +45,9 @@ function normalizeSlug(slug: string) {
     return synonyms[slug] ?? slug;
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
-    const normalized = normalizeSlug(params.slug);
+export default async function ProductPage({ params }: ProductPageProps) {
+    const { slug } = await params;
+    const normalized = normalizeSlug(slug);
     const product = staticProducts.find((p) => p.slug === normalized) ?? null;
 
     if (!product) {
